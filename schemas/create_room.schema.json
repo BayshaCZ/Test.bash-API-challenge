@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "roomid": {
+          "type": "integer"
+        },
+        "roomName": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "accessible": {
+          "type": "boolean"
+        },
+        "image": {
+          "type": "string",
+          "format": "uri",
+          "qt-uri-extensions": [
+            ".jpg",".png"
+          ]
+        },
+        "description": {
+          "type": "string"
+        },
+        "features": {
+          "type": "array"
+        },
+        "roomPrice": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "accessible",
+        "description",
+        "features",
+        "image",
+        "roomName",
+        "roomPrice",
+        "roomid",
+        "type"
+      ]
+}

@@ -17,11 +17,11 @@ module Room
     end
   end
 
-  def self.create_room(cookie)
+  def self.create_room(cookie, payload)
     conn.post "room/" do |req|
       req.headers['Content-Type'] = 'application/json'
       req.headers['Cookie'] = cookie
-      req.body = Payloads.room
+      req.body = payload
     end
   end
 
